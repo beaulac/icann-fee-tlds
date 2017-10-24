@@ -2,7 +2,7 @@
 const strip = s => s.replace(/\./g, '');
 
 module.exports = new Proxy(
-    require('./icann-fee-TLDs.json').reduce(
+    require('./icann-fee-tlds.json').reduce(
         (acc, tld) => {
             acc[strip(tld)] = true;
             return acc;
